@@ -53,6 +53,9 @@ models:
         +tags: normalized_tables
         +materialized: table
     +materialized: table
+  dbt_custom:
+    +schema: public
+    +materialized: table
 
 vars:
   dbt_utils_dispatch_list: ['airbyte_utils']
