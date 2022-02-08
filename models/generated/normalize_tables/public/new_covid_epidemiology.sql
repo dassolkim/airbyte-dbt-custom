@@ -3,7 +3,7 @@
 select
     {{ adapter.quote('key') }},
     cast({{ adapter.quote('date') }} as timestamp),
-    cat(new_tested as bigint),
+    cast(new_tested as bigint),
     cast(new_deceased as integer),
     cast(total_tested as bigint),
     new_confirmed,
