@@ -2,7 +2,7 @@
 -- Final base SQL model
 select
     {{ adapter.quote('key') }},
-    cast({{ adapter.quote('date') }} as timestamp),
+    cast({{ adapter.quote('date') }} as date),
     cast(new_tested as bigint),
     cast(new_deceased as integer),
     cast(total_tested as bigint),
