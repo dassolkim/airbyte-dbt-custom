@@ -8,13 +8,11 @@
 -- depends_on: {{ ref('new_custom_tables_ab3') }}
 select
     {{ adapter.quote('key') }},
-    {{ adapter.quote('date') }},
-    created,
-    updated,
+    cast({{ adapter.quote('date') }} as date),
     new_tested,
     new_deceased,
     total_tested,
-    new_confirmed,
+    cast(new_confirmed as float),
     new_recovered,
     total_deceased,
     _airbyte_ab_id,
